@@ -141,6 +141,8 @@ public class CircleFlowIndicator extends View implements FlowIndicator,
 
 		mSnap = a.getBoolean(R.styleable.CircleFlowIndicator_snap, false);
 		
+		a.recycle();
+
 		initColors(activeColor, inactiveColor, activeType, inactiveType);
 	}
 

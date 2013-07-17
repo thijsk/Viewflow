@@ -114,6 +114,7 @@ public class TitleFlowIndicator extends TextView implements FlowIndicator {
 			typeface = getTypefaceByIndex(typefaceIndex);
 		typeface = Typeface.create(typeface, textStyleIndex);
 
+		a.recycle();		
 	}
 
 	/**
