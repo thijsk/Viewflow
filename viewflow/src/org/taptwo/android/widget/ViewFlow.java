@@ -30,7 +30,7 @@ import android.view.ViewTreeObserver.OnGlobalLayoutListener;
 import android.widget.Adapter;
 import android.widget.AdapterView;
 import android.widget.Scroller;
-
+import com.ortiz.touchview.TouchImageView;
 import org.taptwo.android.widget.viewflow.R;
 
 import java.util.EnumSet;
@@ -257,10 +257,20 @@ public class ViewFlow extends AdapterView<Adapter> {
         return 1.0f;
     }
 
-    @Override
-    public boolean onInterceptTouchEvent(MotionEvent ev) {
-        if (getChildCount() == 0)
+	@Override
+	public boolean onInterceptTouchEvent(MotionEvent ev) {
+        if(ev.getPointerCount() > 1){
             return false;
+        }
+
+        if(getSelectedView() instanceof TouchImageView){
+            if(((TouchImageView) getSelectedView()).isZoomed()){
+                return false;
+            }
+        }
+
+		if (getChildCount() == 0)
+			return false;
 
         if (mVelocityTracker == null) {
             mVelocityTracker = VelocityTracker.obtain();
