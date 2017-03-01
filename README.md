@@ -1,4 +1,5 @@
 # View Flow for Android
+[![](https://jitpack.io/v/thijsk/Viewflow.svg)](https://jitpack.io/#thijsk/Viewflow)
 
 ViewFlow is an Android UI widget providing a horizontally scrollable [ViewGroup](http://developer.android.com/reference/android/view/ViewGroup.html) with items populated from an [Adapter](http://developer.android.com/reference/android/widget/Adapter.html). Scroll down to the bottom of the page for a screen shot.
 
