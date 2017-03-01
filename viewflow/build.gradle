@@ -14,4 +14,17 @@ android {
         release {
         }
     }
+	
+	sourceSets {
+        main {
+            manifest.srcFile 'AndroidManifest.xml'
+            java.srcDirs = ['src']
+            res.srcDirs = ['res']
+        }
+    }
+
+    dependencies {
+        compile 'com.github.thijsk:TouchImageView:v1.3.1'
+    }
+	
 }
