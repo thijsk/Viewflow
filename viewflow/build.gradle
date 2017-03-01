@@ -5,7 +5,6 @@ android {
     buildToolsVersion "21.0.2"
 
     defaultConfig {
-        applicationId "org.taptwo.android.widget.viewflow"
         minSdkVersion 4
         targetSdkVersion 21
     }
