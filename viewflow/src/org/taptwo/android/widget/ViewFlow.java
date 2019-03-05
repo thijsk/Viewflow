@@ -718,8 +718,9 @@ public class ViewFlow extends AdapterView<Adapter> {
 
             // Add new view to buffer
             int newBufferIndex = mCurrentAdapterIndex + mSideBuffer;
-            if (newBufferIndex < mAdapter.getCount())
+            if (newBufferIndex < mAdapter.getCount()) {
                 mLoadedViews.addLast(makeAndAddView(newBufferIndex, true));
+            }
 
         } else { // to the left
             mCurrentAdapterIndex--;
@@ -744,12 +745,12 @@ public class ViewFlow extends AdapterView<Adapter> {
         requestLayout();
         setVisibleView(mCurrentBufferIndex, true);
         if (mIndicator != null) {
-            mIndicator.onSwitched(mLoadedViews.get(mCurrentBufferIndex),
+            mIndicator.onSwitched(mLoadedViews.get(mCurrentScreen),
                     mCurrentAdapterIndex);
         }
         if (mViewSwitchListener != null) {
             mViewSwitchListener
-                    .onSwitched(mLoadedViews.get(mCurrentBufferIndex),
+                    .onSwitched(mLoadedViews.get(mCurrentScreen),
                             mCurrentAdapterIndex);
         }
         logBuffer();
