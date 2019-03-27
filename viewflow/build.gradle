@@ -2,8 +2,7 @@ apply plugin: 'com.android.library'
 
 android {
     compileSdkVersion 27
-    buildToolsVersion '27.0.3'
-
+    
     defaultConfig {
         minSdkVersion 19
         targetSdkVersion 27
@@ -25,7 +24,7 @@ android {
     }
 
     dependencies {
-        compile 'com.github.thijsk:TouchImageView:v1.3.1'
+        implementation 'com.github.thijsk:TouchImageView:v1.3.1'
     }
 	
 }
