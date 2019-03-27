@@ -1,1 +1,1 @@
-include ':viewflow', ':viewflow-example'
+include ':viewflow'
